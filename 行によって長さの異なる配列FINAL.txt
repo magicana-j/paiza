@@ -1,0 +1,16 @@
+# coding utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+b.insert(0, 0)
+pnt = b[0]
+ans = []
+for i in range(len(b)-1)
+    ans.append(a[pntpnt+b[i+1]])
+    pnt += b[i+1]
+for i in ans
+    print( .join(map(str,i)))

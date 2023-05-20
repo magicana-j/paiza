@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N, Q;
+    cin >> N >> Q;
+    int arr[200];
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];
+    }
+    int size = N;  // arrに入っている値の数
+    for (int i = 0; i < Q; i++) {
+        int query;
+        cin >> query;
+        if (query == 0) {
+            // push_back
+            int x;
+            cin >> x;
+            arr[size] = x;  // arrに値を追加してsizeを 1 個増やす
+            size++;
+        } else if (query == 1) {
+            // pop_back
+            size--;  // size以降の要素は空とみなしているのでsizeを減らすだけでよい
+        } else {
+            // print
+            for (int j = 0; j < size; j++) {
+                cout << arr[j];
+                if (j == size - 1) {
+                    cout << endl;
+                } else {
+                    cout << ' ';
+                }
+            }
+        }
+    }
+}

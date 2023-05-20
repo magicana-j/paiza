@@ -1,0 +1,36 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+from itertools import chain
+
+n, h, w, p, q = map(int, input().split())
+
+seats = [[0 for i in range(w)] for j in range(h)]
+# print(seats)
+best_seat = [p, q]
+
+temp = n
+while(n>0):
+    i, j = map(int, input().split())
+    # print(i, j)
+    seats[i][j] = 999
+    n = n-1
+
+#    reserved_seats.append(list(map(int, input().split())))
+
+# print(n, h, w, p, q)
+# print(reserved_seats)
+
+manhattan = [[0 for i in range(w)] for j in range(h)]
+for row, temp in enumerate(seats):
+    for column, v in enumerate(temp):
+        if seats[row][column] != 999:
+            manhattan[row][column] = abs(row - best_seat[0]) + abs(column - best_seat[1])
+        else:
+            manhattan[row][column] = 999
+# print(manhattan)
+mn = min(chain(*manhattan))
+for i in range(h):
+    for j in range(w):
+        if manhattan[i][j] == mn:
+            print(i, j)

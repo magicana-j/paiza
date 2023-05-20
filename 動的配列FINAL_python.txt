@@ -1,0 +1,29 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+
+n, q = map(int, input().split())
+
+a = list(map(int, input().split()))
+
+pnt = n - 1
+# print(pnt)
+
+for i in range(q):
+    query = list(map(int, input().split()))
+    # print(query)
+    if query[0]==0:
+        # print("query:", query[0])
+        pnt = pnt + 1
+        a.append(query[1])
+        # print(a)
+    elif query[0]==1:
+        # print("query:", query[0])
+        pnt = pnt - 1
+        # print(a)
+    elif query[0]==2:
+        for j in range(pnt+1):
+            if j == pnt:
+                print(a[j])
+            else:
+                print(a[j], end=" ")
