@@ -1,16 +1,8 @@
-import os
-dirname = os.path.dirname(__file__)
+# coding: utf-8
 
-in_file = dirname + '/input.txt'
-f = open(in_file, 'r', encoding='UTF-8')
-
-
-def print_list(my_list):
-    print(" ".join(map(str, my_list)))
-
-
-n = int(f.readline())
-a = list(map(int, f.readline().split()))
-
-print(n)
-print_list(a)
+def read_line(s):
+    f = open(s, 'r', encoding='UTF-8')
+    datalist = f.readlines()
+    arguments = []
+    arguments[0] = list(map(int, datalist[0].split()))
+    return result
