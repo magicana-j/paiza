@@ -26,8 +26,12 @@ def input_to_n_lists(n: int):
     """
     result = []
     for _ in range(n):
-        result.append(line_to_int_list(input()))
+        result.append(line_to_int_list())
     return result
+
+
+def join_list_to_str(l: list):
+    return " ".join(list(map(str, l)))
 
 
 n = int_input()
