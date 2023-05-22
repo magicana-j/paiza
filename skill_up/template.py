@@ -25,9 +25,9 @@ def join_list_to_str(l: list):
 """
 int_input()             数値を一つ入力
 multi_int_input()       数値を複数入力
-line_to_int_list()      一行のスペース区切りデータをリストに格納
+line_to_int_list()      一行のスペース区切りデータを一次元リストに格納
 input_to_n_lists(n)     n行のスペース区切りデータを多次元リストに格納
-join_list_to_str(l)     数値リストをスペース区切り文字列に変換
+join_list_to_str(l)     一次元数値リストlをスペース区切り文字列に変換
 """
 
 
