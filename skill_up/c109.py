@@ -34,8 +34,6 @@ for i in range(n):
     s.append(input())
 
 users = []
-names = []
-id = []
 for i in range(n):
     user_id = int(re.sub(r"\D", "", s[i]))
     user_name = re.sub(r"[^a-zA-Z]", "", s[i])
