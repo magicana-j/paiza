@@ -1,8 +1,20 @@
 # coding: utf-8
+# Your code here!
+import fileinput
 
-def read_line(s):
-    f = open(s, 'r', encoding='UTF-8')
-    datalist = f.readlines()
-    arguments = []
-    arguments[0] = list(map(int, datalist[0].split()))
-    return result
+
+class Solution:
+    a = []
+    b = []
+
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+
+if __name__ == "__main__":
+    n = int(input())
+    for line in fileinput.input():
+        tokens = line.strip().split()
+        a, b = int(tokens[0]), int(tokens[1])
+        print("%d %d" % (a, b))
