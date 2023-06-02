@@ -18,7 +18,7 @@ def line_to_strlist():
 def input_to_n_lists(n: int):
     result = []
     for _ in range(n):
-        result.append(line_to_int_list())
+        result.append(line_to_intlist())
     return result
 
 
