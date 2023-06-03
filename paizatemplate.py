@@ -3,9 +3,10 @@
 import fileinput
 
 m = int(input())
-a1 = []
-b1 = []
+# n,m,k = map(int(input().split()))
+a = []
 for line in fileinput.input():
-    tokens = line.strip.split()
-    a1.append(tokens[0])
-    b1.append(tokens[1])
+    data = map(int, line.strip().split())
+    # data = map(str, line.strip().split())
+    a.append(list(data))
+    # a.append(int(line))
