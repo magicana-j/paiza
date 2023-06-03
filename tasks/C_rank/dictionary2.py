@@ -21,6 +21,7 @@ for line in range(num_of_turns):
 
 # print(damage_dict)
 
-# 検索対象者の合計ダメージ表示
-person = input()
-print(damage_dict[person])
+# 名前順に辞書の値を表示
+sorted_dic = sorted(damage_dict.items())
+for i in range(num_of_names):
+    print(sorted_dic[i][1])
